@@ -33,6 +33,9 @@
 - The last node always contains null in the "next" field.
 
 - head node always points to first node.
+
+- create a temporary node whenever you perform an operation. 
+
 ## **Difference between Arrays and LinkedList ?**
 
 - The manipulations can be done easily in linkedlist whereas in arrays it is difficult.
