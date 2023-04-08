@@ -122,6 +122,39 @@ class backend
         //since while loop exits when it meet null
         System.out.print(temp.data+"\n");
     }
+    
+    public void reverse()
+    {
+        Node temp1=null;
+        Node temp2=null;
+        
+        while(head!=null)
+        {
+            temp2=head.next;
+            head.next=temp1;
+            
+            temp1=head;
+            head=temp2;
+        }
+        head=temp1;
+    }
+    
+    public void search(int key)
+    {
+        Node temp=head;
+        
+        boolean flag=false;
+        
+        while(temp!=null)
+        {
+            if(temp.data == key)
+            {
+                flag=true;
+                temp=temp.next;
+            }
+        }
+        return flag;
+    }
 }
 public class linkedlist 
 {
@@ -131,7 +164,7 @@ public class linkedlist
         Scanner sc=new Scanner(System.in);
         while(true)
         {
-            System.out.println("1.insertAtEnd 2.insertAtStart 3.insertAtPos 4.deleteAtEnd 5.deleteAtStart 6.deleteAtPos 7.show 8.exit");
+            System.out.println("1.insertAtEnd 2.insertAtStart 3.insertAtPos 4.deleteAtEnd 5.deleteAtStart 6.deleteAtPos 7.show 8.reverse 9.search 10.exit");
             int choice=sc.nextInt();
             
             if (choice == 1)
@@ -181,10 +214,26 @@ public class linkedlist
                 obj.show();
             }
             
+            else if (choice == 8)
+            {
+                obj.reverse();
+            }
+            
+            else if (choice == 9)
+            {
+                System.out.print("Enter the element to be searched :");
+                int key=sc.nextInt();
+                boolean result=obj.search(key);
+                
+                if(result)
+                    System.out.println("Element is present");
+                else
+                    System.out.println("Element is Not Present");
+            }
+            
             else 
             {
                 break;
-                
             }
                 
         }
