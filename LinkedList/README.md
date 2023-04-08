@@ -24,6 +24,7 @@
 - search a data
 - reverse linked list
 - sort elements
+- check loop 
 
 ## **Basic Concepts**
 
