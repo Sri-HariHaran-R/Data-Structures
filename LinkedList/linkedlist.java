@@ -155,6 +155,27 @@ class backend
         }
         return flag;
     }
+    
+    public boolean checkLoop()
+    {
+        Node fast=head;
+        Node slow=head;
+        
+        if(head==null)
+            return false;
+        else
+        {
+            while(fast.next!=null && fast.next.next!=null)
+            {
+                fast=fast.next.next;
+                slow=slow.next.next;
+                
+                if(fast==slow)
+                    return true;
+            }
+            return false;
+        }
+    }
 }
 public class linkedlist 
 {
@@ -164,7 +185,7 @@ public class linkedlist
         Scanner sc=new Scanner(System.in);
         while(true)
         {
-            System.out.println("1.insertAtEnd 2.insertAtStart 3.insertAtPos 4.deleteAtEnd 5.deleteAtStart 6.deleteAtPos 7.show 8.reverse 9.search 10.exit");
+            System.out.println("1.insertAtEnd 2.insertAtStart 3.insertAtPos 4.deleteAtEnd 5.deleteAtStart 6.deleteAtPos 7.show 8.reverse 9.search 10.checkLoop 11.exit");
             int choice=sc.nextInt();
             
             if (choice == 1)
@@ -229,6 +250,15 @@ public class linkedlist
                     System.out.println("Element is present");
                 else
                     System.out.println("Element is Not Present");
+            }
+            
+            else if (choice == 10)
+            {
+                boolean result=obj.checkLoop();
+                if(result)
+                    System.out.println("Loop is Present");
+                else
+                    System.out.println("Loop is Not Present");
             }
             
             else 
