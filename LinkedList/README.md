@@ -21,6 +21,9 @@
 - delete at begin
 - delete at index
 - show
+- search a data
+- reverse linked list
+- sort elements
 
 ## **Basic Concepts**
 
