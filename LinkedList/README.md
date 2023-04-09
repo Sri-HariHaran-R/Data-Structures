@@ -42,7 +42,7 @@
 - sort elements
 - check loop 
 
-## **Basic Concepts**
+## **Basic Concepts of Singly LinkedList**
 
 - A Node consists of two fields:-
     - data -> consists value
