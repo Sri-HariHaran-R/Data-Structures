@@ -7,11 +7,26 @@
 - elements are arranged in sequential way
 - types of linkedlist:-
     - singly linkedlist
-    - double Linkedlist
+    - doubly Linkedlist
     - circular linkedlist
 
 # **Singly LinkedList**
 ![singly-linkedlist](https://user-images.githubusercontent.com/76623387/224223723-e77f03a6-5391-4cc3-9050-8938f229a0fe.png)
+
+# **Doubly LinkedList**
+
+- A node consist of three fields.
+    - prev
+    - data
+    - next
+- Therefore we can go in either direction 
+    - forward
+    - backward
+- prev field in first node will points to null and next field in last node will points to null.
+
+# **Circular LinkedList**
+- A linkedlist where last element points to first element.
+- This forms circular loop.
 
 ## **Opeartions in Linked List**
 - insert at end
