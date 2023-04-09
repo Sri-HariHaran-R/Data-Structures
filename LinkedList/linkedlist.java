@@ -176,6 +176,31 @@ class backend
             return false;
         }
     }
+    
+    public void sort()
+    {
+        Node temp=head;
+        Node index=null;
+        
+        int swap;
+        
+        while(temp!=null)
+        {
+            index=temp.next;
+            
+            while(index!=null)
+            {
+                if(temp.data>index.data)
+                {
+                    swap=temp.data;
+                    temp.data=index.data;
+                    index.data=swap;
+                }
+                index=index.next;
+            }
+            temp=temp.next;
+        }
+    }
 }
 public class linkedlist 
 {
@@ -185,7 +210,7 @@ public class linkedlist
         Scanner sc=new Scanner(System.in);
         while(true)
         {
-            System.out.println("1.insertAtEnd 2.insertAtStart 3.insertAtPos 4.deleteAtEnd 5.deleteAtStart 6.deleteAtPos 7.show 8.reverse 9.search 10.checkLoop 11.exit");
+            System.out.println("1.insertAtEnd 2.insertAtStart 3.insertAtPos 4.deleteAtEnd 5.deleteAtStart 6.deleteAtPos 7.show 8.reverse 9.search 10.checkLoop 11.sort 12.exit");
             int choice=sc.nextInt();
             
             if (choice == 1)
@@ -259,6 +284,11 @@ public class linkedlist
                     System.out.println("Loop is Present");
                 else
                     System.out.println("Loop is Not Present");
+            }
+            
+            else if (choice == 11)
+            {
+                obj.sort();
             }
             
             else 
