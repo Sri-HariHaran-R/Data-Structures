@@ -27,6 +27,7 @@
 # **Circular LinkedList**
 - A linkedlist where last element points to first element.
 - This forms circular loop.
+- Circular linkedlist can be either singly linked or doubly linked.
 
 ## **Opeartions in Linked List**
 - insert at end
